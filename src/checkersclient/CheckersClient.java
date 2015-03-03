@@ -29,7 +29,7 @@ public class CheckersClient extends JFrame{
     public CheckersClient(AIPlayer player, String[] args){
         this.player = player;
         int portNumber = 2222;
-        String host = "localhost";
+        String host = "76.3.227.25";
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setResizable(false);
         this.add(player);

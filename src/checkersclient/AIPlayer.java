@@ -50,13 +50,13 @@ public class AIPlayer extends JPanel implements CheckersPlayer {
             CheckersBoard next = new CheckersBoard(board);
             next.move(move);
             if (red) {
-                Double nextVal = minValue(next, alpha, beta, 5);
+                Double nextVal = minValue(next, alpha, beta, 4);
                 if (alpha <= nextVal) {
                     alpha = nextVal;
                     retMove = move;
                 }
             } else {
-                Double nextVal = maxValue(next, alpha, beta, 5);
+                Double nextVal = maxValue(next, alpha, beta, 4);
                 if (beta >= nextVal) {
                     beta = nextVal;
                     retMove = move;
@@ -72,10 +72,8 @@ public class AIPlayer extends JPanel implements CheckersPlayer {
     public void setOpponentMove(String move) {
         if (move.equals("Lose") || move.equals("BYE")){
             System.out.println("You win!");
-            System.exit(0);
         }else if (move.equals("DRAW")){
             System.out.println("It's a draw!");
-            System.exit(0);
         }
         board.move(move);
         repaint();

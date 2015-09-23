@@ -110,7 +110,7 @@ public class AIPlayer extends JPanel implements CheckersPlayer {
         for (String move : moves) {
             CheckersBoard next = new CheckersBoard(state);
             next.move(move);
-            beta = Math.min(beta, minValue(next, alpha, beta, depth - 1));
+            beta = Math.min(beta, maxValue(next, alpha, beta, depth - 1));
             if (beta <= alpha) {
                 return beta;
             }

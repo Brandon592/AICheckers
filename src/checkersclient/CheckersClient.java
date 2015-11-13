@@ -22,7 +22,6 @@ public class CheckersClient extends JFrame{
     private PrintStream os = null;
     private BufferedReader is = null;
     //private BufferedReader inputLine = null;
-    private boolean closed = false;
     private AIPlayer player = null;
     
 
